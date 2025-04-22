@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G3--settings/music</title>
+  <link rel="icon" class="icon"   href="galaxyIcon.png">
+  <style>
+body{
+  background-image: url(https://images.alphacoders.com/134/1345265.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+.title{
+  color: rgb(255, 255, 255);  
+  size: 200px;
+  
+}
+  
+.title{
+  size-adjust: 100px;
+  font-size: 100px;
+  position: relative;
+  top: -40px;
+}}
+
+.music{
+  height: 40px;
+  width: 200px;
+  background-color: rgb(91, 179, 247);
+  border: 2px solid black;
+  border-radius: calc(50px);
+  color: white;
+  margin: 20px;
+  
+}
+.music:active{
+  background-color: rgb(39, 105, 120);
+
+
+}
+.music:hover{
+  background-color: rgb(129, 191, 232);
+}
+.p{
+  color: white;
+  font-size: 30px;
+}
+.subtitle{
+  color: white;
+  font-size: 60px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+
+
+
+.themebutton{
+ height: 32px;
+ width: 190px;
+ margin: 30px;
+ color: black;
+ background-color: rgb(45, 109, 116);
+ border-radius: 20px;
+ font-size: 20px;
+ border: 1px solid white;
+font-style: normal;
+font-size: 17px;
+text-emphasis-color: white;
+color: white;
+ 
+}
+.themebutton:hover{
+  background-color: rgb(72, 136, 133);
+  
+}
+
+.dark-mode{
+  background-color: black;
+  color: white;
+}
+
+.addgame{
+  padding: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 30px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: rgb(80, 149, 110);
+  opacity: 96%;
+  text-decoration: solid;
+  text-size-adjust: 30px;
+  padding-left: 20px;
+  padding-right: 0px;
+  width: 260px;
+  
+}
+
+.addgame:hover{
+  background-color: rgb(74, 114, 87);
+  text-decoration-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+.js-submit{
+  margin-left: 30px;
+  padding: 10px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: rgb(110, 205, 166);
+  position: relative;
+  right: 0px;
+  width: 100px;
+  opacity: 90%;
+}
+.js-submit:hover{
+  background-color: rgb(51, 245, 21);
+}
+
+
+.gohome{
+  margin: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  top: 50px;
+ margin-left: 2px;
+ left: 2px;
+ padding: 40px;
+ padding-right: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.addgame::placeholder{
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+  </style>
+</head>
+<body>
+
+ <h1 class="title">Settings: </h1>
+ <h3 class="subtitle">Music:</h3>
+ <div class="p">
+<p class="p">Feeling too overwelmed? Play some relaxing galaxy music to feel better!</p>
+<p><em>(Note: Click the button once, to start the music, twice to stop.)</em></p>
+</div>
+
+<ul>
+<li>
+<button onclick="toggleMusic()" class="music">Galaxy Music/calm</button>
+<audio id="backgroundMusic" src="distant-galaxy-152138.mp3" loop></audio></li>
+
+<li><button onclick="toggleMusic2()" class="music">Galaxy Music/classic</button>
+<audio id="backgroundMusic2" src="Pufino - Magnificent (freetouse.com) (1).mp3" loop></audio></li>
+
+<li><button onclick="toggleMusic3()" class="music">Galaxy Music/relaxing</button>
+<audio id="backgroundMusic3" src="Damtaro - Space (freetouse.com).mp3" loop></audio> </li>
+
+</ul>
+<h3 class="subtitle">Want to play a spesific game?</h3>
+<p class="p">If their is a game that you want to see here, in G3, let us know! <br>(We will do our best, though, there is <strong> no guarantee</strong> that your game will be added.)</p>
+
+<form action="text" method="GET" >
+  <label for="Addgame"></label>
+  <input type="text" name="newgame" id="Addgame" placeholder="Type the game URL here. . ." class="addgame">
+</form>
+
+
+<button  onclick="
+let submit = document.querySelector('.js-submit')
+
+if( submit.innerHTML === 'Submit'){
+submit.innerHTML = 'Submitted';
+} else{
+  submit.innerHTML = 'Submit';
+}
+
+"
+class="js-submit">Submit</button>
+
+
+
+
+
+<h3 class="subtitle">Theme: </h3>
+
+<p class="p">Change the theme of G3</p>
+
+<button id="dark-mode"  class="themebutton">Dark mode</button>
+
+<script>
+  document.getElementById('dark-mode').addEventListener('click', function 
+  showAlert(){
+    alert("Something went wrong.😵‍💫 Try again later.")
+  })
+  
+</script>
+
+ <script>
+
+
+   function toggleMusic() {
+     const audio = document.getElementById("backgroundMusic");
+ 
+     if (audio.paused) {
+       audio.play(); // Play the audio if it is paused
+     } else {
+       audio.pause(); // Pause the audio if it is playing
+     }
+   }
+
+
+   function toggleMusic2() {
+     const audio = document.getElementById("backgroundMusic2");
+ 
+     if (audio.paused) {
+       audio.play(); // Play the audio if it is paused
+     } else {
+       audio.pause(); // Pause the audio if it is playing
+     }
+   }
+
+   function toggleMusic3() {
+     const audio = document.getElementById("backgroundMusic3");
+ 
+     if (audio.paused) {
+       audio.play(); // Play the audio if it is paused
+     } else {
+       audio.pause(); // Pause the audio if it is playing
+     }
+   }
+  
+ </script>
+ 
+
+ <a href="index.html" class="gohome">Go to: home page</a>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G3-- Anything you wonna share?</title>
+  <link rel="icon" class="icon"   href="galaxyIcon.png">
+  <style>
+
+body{
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230328/pngtree-science-fiction-world-city-planet-cartoon-background-image_2050657.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+}
+h1{
+  color: white;
+  font-size: 90px;
+}
+
+.p{
+color: rgb(0, 0, 0);
+font-size: 20px;
+position: relative;
+top: -70px;
+}
+
+.usertypes{
+  height: 50px;
+  width: 400px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: calc(30px);
+  background-color: rgb(240, 163, 96);
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  flex: auto;
+  min-width: 400px;
+  max-width: 100%;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  position: relative;
+ top: 20px;
+}
+input ::placeholder{
+  color: white;
+}
+.usertypes::placeholder{
+  color: white;
+}
+
+.usertypes:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(243, 190, 116);
+}
+.js-submit{
+  background-color: rgb(239, 203, 149);
+  border: 1px solid black;
+  border-radius: 30px;
+  position: relative;
+  margin: 40px;
+  margin-left: 10px;
+  height: 35px;
+  width: 100px;
+  position: relative ;
+  top: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+.js-submit:active{
+  background-color: rgb(78, 243, 12);
+  contain: 'supmitted';
+  
+}
+.p2{
+  color: black;
+  margin-bottom: 0px;
+}
+
+.gohome{
+  margin: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  top: 120px;
+ padding: 0px;
+ padding-top: 0px;
+ padding: auto;
+ padding-right: 0px;
+
+left: 2px;
+  color: white;
+  font-size: 26px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+  </style>
+</head>
+<body>
+  <h1 class="h1">Want to say something? Share it with us!</h1>
+  <p class="p"><em> Please tell us about any problem you spot in G3. Be spesific, we will try our best to fix any issue!</em></p>
+  <p class="p2"><em>Note: Don't forget to click "submit" when you're done.</em></p>
+  
+
+  <form action="text" method="GET" >
+    <label for="search" ></label>
+    <input type="text" id="search" name="q" placeholder="Type here. . ."  class="usertypes">
+   
+  </form>
+
+
+
+<button  onclick="
+const buttonElm = document.querySelector('.js-submit')
+if (buttonElm.innerHTML === 'Submit') {
+  buttonElm.innerHTML = 'submitted';
+  
+} else {
+  buttonElm.innerHTML = 'Submit'
+}"   class="js-submit">Submit</button>
+  
+
+<script>
+
+
+</script>
+
+<a href="index.html" class="gohome">Go to: home page</a>
+
+</body>
+</html>
